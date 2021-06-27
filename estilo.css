@@ -77,8 +77,9 @@ body {
 }
 
 #cardapio {
-    padding: 0px 20px;
     grid-area: cardapio;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #rodape-pagina {
@@ -113,7 +114,11 @@ body {
 
 /* EXERCÍCIO 4: cada item do menu */
 
-article {}
+article {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2em;
+}
 
 
 /* EXERCÍCIO 5: o rodapé */
