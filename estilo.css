@@ -84,7 +84,6 @@ body {
 
 #rodape-pagina {
     grid-area: rodape-pagina;
-    padding: 46px 15px 25px;
     text-align: left;
 }
 
@@ -123,7 +122,11 @@ article {
 
 /* EXERCÍCIO 5: o rodapé */
 
-#rodape-pagina {}
+#rodape-pagina {
+    display: flex;
+    justify-content: flex-end;
+    padding: 46px 15px 25px 0px;
+}
 
 
 /* EXERCÍCIO 6: lateral */
