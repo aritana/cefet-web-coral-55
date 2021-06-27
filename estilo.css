@@ -7,11 +7,11 @@
 @import 'fonts/verdana.css';
 body {
     background-color: #fff;
-    font-family: 'Verdana';
+    font-family: 'Verdana', sans-serif;
 }
 
 h1 {
-    font-family: 'Ravie';
+    font-family: 'Ravie', sans-serif;
 }
 
 strong {
@@ -22,6 +22,8 @@ strong {
     background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
     border-left: 1px solid #d3d3d3;
     border-right: 1px solid #d3d3d3;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #cardapio {
@@ -45,21 +47,45 @@ strong {
 
 /* EXERCÍCIO 2: layout da página */
 
+hml,
+body,
 #recipiente {
-    /* layout da página aqui */
-    /* ... */
-    /* ... */
-    /* ... */
-    /* ... */
+    min-height: 100vh;
 }
 
-#cabecalho-pagina {}
+body {
+    margin: 0;
+}
 
-#lateral {}
+#recipiente {
+    /* layout da página aqui */
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 145px 646px;
+    grid-template-areas: "lateral cabecalho-pagina" "lateral cardapio " "lateral rodape-pagina"
+}
 
-#cardapio {}
+#cabecalho-pagina {
+    grid-area: cabecalho-pagina;
+}
 
-#rodape-pagina {}
+#lateral {
+    grid-area: lateral;
+}
+
+#cardapio {
+    padding: 0px 20px;
+    grid-area: cardapio;
+}
+
+#rodape-pagina {
+    grid-area: rodape-pagina;
+    padding: 46px 15px 25px;
+    text-align: left;
+}
 
 
 /* EXERCÍCIO 3: cabeçalho da página */
