@@ -5,8 +5,20 @@
 
 @import 'fonts/ravie.css';
 @import 'fonts/verdana.css';
+:root {
+    --body-color: #fff;
+    --strong-color: #d027aa;
+    --cardapio-background-color: rgba(255, 255, 255, 0.2);
+    --cardapio-texto-color: #333;
+    --cardapio: #aac0ae;
+    --cabecalho-pagina-color: #e90c0c;
+    --recipiente-lg1: #f6f1b2;
+    --recipiente-lg2: #4599b2;
+    --recipiente-border: #d3d3d3;
+}
+
 body {
-    background-color: #fff;
+    background-color: var(--body-color);
     font-family: 'Verdana', sans-serif;
 }
 
@@ -15,39 +27,39 @@ h1 {
 }
 
 strong {
-    color: #d027aa;
+    color: var(--strong-color);
 }
 
 #recipiente {
-    background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-    border-left: 1px solid #d3d3d3;
-    border-right: 1px solid #d3d3d3;
+    background-image: linear-gradient(to bottom, var(--recipiente-lg1), var(--recipiente-lg2) 80%);
+    border-left: 1px solid var(--recipiente-border);
+    border-right: 1px solid var(--recipiente-border);
     margin-left: auto;
     margin-right: auto;
 }
 
 #cardapio {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-top: 1px solid #aac0ae;
-    border-bottom: 1px solid #aac0ae;
-    border-left: 1px solid #aac0ae;
+    background-color: var(--cardapio-background-color);
+    border-top: 1px solid var(--cardapio);
+    border-bottom: 1px solid var(--cardapio);
+    border-left: 1px solid var(--cardapio);
 }
 
 #cardapio h3 {
     font-size: 18px;
-    color: #333;
+    color: var(--cardapio-texto-color);
     margin-top: 30px;
 }
 
 #cardapio article {
     font-size: 14px;
-    color: #333;
+    color: var(--cardapio-texto-color);
 }
 
 
 /* EXERCÍCIO 2: layout da página */
 
-hml,
+html,
 body,
 #recipiente {
     min-height: 100vh;
@@ -97,7 +109,7 @@ body {
 #cabecalho-pagina h1 {
     margin: 0;
     font-size: 36px;
-    color: #e90c0c;
+    color: var(--cabecalho-pagina-color);
     font-weight: normal;
     text-align: center;
 }
@@ -105,7 +117,7 @@ body {
 #cabecalho-pagina h2 {
     margin: 0;
     font-size: 24px;
-    color: #333;
+    color: var(--cardapio-texto-color);
     font-weight: normal;
     text-align: end;
 }
@@ -182,3 +194,12 @@ article {
 
 /* coloque aqui a media query para sobrescrever o valor
    das custom properties para o modo escuro */
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --cardapio-texto-color: #eee;
+        --body-color: #000;
+        --recipiente-lg1: #043f5b;
+        --recipiente-lg2: #0f0020;
+    }
+}
